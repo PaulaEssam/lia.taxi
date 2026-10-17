@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d92332">
+  <meta name="description" content="Book a reliable taxi in Montreal and Greater Montreal with LIA Taxi. Plan airport transfers, local rides and long-distance trips with professional service, 24/7.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.liataxi.ca/">
+  <title>LIA Taxi Montreal | Reliable Taxi Service & Airport Transfers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "LIA Taxi",
+    "url": "https://www.liataxi.ca/",
+    "areaServed": ["Montreal", "Laval", "Longueuil", "Greater Montreal", "Quebec"],
+    "description": "Taxi service for local rides, airport transfers and pre-booked trips in Greater Montreal.",
+    "telephone": "+1-514-000-0000",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+  <div class="announcement"><span class="pulse"></span> MOVING MONTREAL, DAY & NIGHT <span class="announcement-right">English <span class="tiny-dot">•</span> Français soon</span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="LIA Taxi home">
+      <span class="brand-mark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 27.5 12.5 16a5 5 0 0 1 4.7-3.2h13.6a5 5 0 0 1 4.7 3.2L40 27.5v9H8z" fill="currentColor"/><path d="M14 25h20l-3.2-8H17.2z" fill="#fff"/><path d="M6 29h36v5H6z" fill="#ffd447"/><circle cx="15" cy="36" r="4" fill="#1f242b"/><circle cx="33" cy="36" r="4" fill="#1f242b"/></svg></span>
+      <span class="brand-word">lia<span>taxi</span><small>MONTRÉAL</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#services">Services</a><a href="#why-lia">Why LIA</a><a href="#coverage">Service areas</a><a href="#journal">Blog</a>
+    </nav>
+    <div class="header-actions"><a class="driver-link" href="#drivers">Become a driver <span>↗</span></a><a class="btn btn-red btn-small" href="#book">Book a ride <span>↗</span></a></div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> YOUR RIDE. YOUR CITY.</div>
+          <h1>Montreal moves.<br><em>LIA gets you there.</em></h1>
+          <p class="hero-lede">From everyday trips to early-morning airport runs, get where you need to be with a ride that puts you first.</p>
+          <div class="hero-ctas"><a class="btn btn-yellow" href="#book">Book your taxi <span>↗</span></a><a class="text-link" href="#services">Explore our services <span>→</span></a></div>
+          <div class="hero-proof">
+            <div class="avatar-stack"><span>J</span><span>M</span><span>A</span><span>+</span></div>
+            <div><strong>A better ride starts here.</strong><small>Local service. Human support.</small></div>
+          </div>
+          <div class="hero-footnote"><span class="check-circle">✓</span> Built around Montreal. Here for your next stop.</div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image"></div>
+          <div class="image-shade"></div>
+          <div class="image-caption"><span class="caption-icon">↗</span><div><strong>Montreal, on your time.</strong><small>Everyday rides · Airport · Long distance</small></div></div>
+          <div class="floating-card"><span class="floating-icon">✦</span><div><strong>Ride with confidence</strong><small>Simple booking. Clear details.</small></div></div>
+          <div class="yellow-sticker">YOUR CITY.<br>YOUR RIDE.</div>
+        </div>
+      </div>
+      <div class="hero-bottom"><span><i class="mini-icon">⌖</i> Greater Montreal</span><span><i class="mini-icon">◷</i> Rides planned around you</span><span><i class="mini-icon">↗</i> Local & long-distance trips</span><span class="bottom-scroll">SCROLL TO EXPLORE <b>↓</b></span></div>
+    </section>
+
+    <section class="booking-wrap" id="book">
+      <div class="booking-intro"><div class="eyebrow">LET'S GET YOU THERE</div><h2>Your next ride,<br><span>in a few details.</span></h2><p>Tell us where you're going. We'll make the next step easy.</p><div class="booking-note"><span>✳</span> Booking request demo — connected dispatch is not included in this front-end prototype.</div></div>
+      <div class="booking-card">
+        <div class="booking-tabs"><button class="booking-tab active" data-mode="oneway">One-way trip</button><button class="booking-tab" data-mode="return">Round trip <span class="tab-pill">RETURN</span></button></div>
+        <form id="booking-form">
+          <div class="form-grid">
+            <label class="field field-wide"><span class="field-icon">⌖</span><span class="field-content"><small>Pick-up location</small><input required name="pickup" placeholder="Enter pick-up address" autocomplete="street-address"></span><span class="field-marker red-marker"></span></label>
+            <button type="button" class="swap-btn" id="swap-locations" aria-label="Swap pick-up and destination">↕</button>
+            <label class="field field-wide"><span class="field-icon">◎</span><span class="field-content"><small>Destination</small><input required name="destination" placeholder="Where are you going?" autocomplete="off"></span><span class="field-marker yellow-marker"></span></label>
+            <label class="field"><span class="field-content"><small>Date</small><input required type="date" name="date" id="ride-date"></span></label>
+            <label class="field"><span class="field-content"><small>Pick-up time</small><input required type="time" name="time" value="09:00"></span></label>
+            <label class="field"><span class="field-content"><small>Passengers</small><select name="passengers"><option>1 passenger</option><option>2 passengers</option><option>3 passengers</option><option>4 passengers</option><option>5+ passengers</option></select></span></label>
+            <label class="field"><span class="field-content"><small>Ride type</small><select name="rideType"><option>Standard taxi</option><option>Airport transfer</option><option>Minivan</option><option>Accessible ride (request)</option><option>Long distance</option></select></span></label>
+            <div class="return-fields hidden" id="return-fields"><label class="field"><span class="field-content"><small>Return date</small><input type="date" name="returnDate"></span></label><label class="field"><span class="field-content"><small>Return time</small><input type="time" name="returnTime"></span></label></div>
+          </div>
+          <div class="booking-submit"><p><span class="secure-dot">✓</span> No payment is taken on this demo form.</p><button class="btn btn-red" type="submit">Continue booking <span>↗</span></button></div>
+          <div class="form-message" id="form-message" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="services section-pad" id="services">
+      <div class="section-heading"><div><div class="eyebrow">MORE THAN A RIDE</div><h2>Wherever life takes you,<br><em>there's a LIA for that.</em></h2></div><p>One trusted ride for the everyday and the out-of-the-ordinary. Choose the service that fits your plans.</p></div>
+      <div class="service-grid">
+        <article class="service-card service-main"><div class="service-photo photo-city"></div><div class="service-overlay"></div><div class="service-number">01 / EVERYDAY</div><div class="service-content"><span class="service-icon">↗</span><h3>City rides</h3><p>For work, appointments, errands and everything in between.</p><a href="#book" class="circle-arrow" aria-label="Book a city ride">↗</a></div></article>
+        <article class="service-card"><div class="service-photo photo-airport"></div><div class="service-number">02 / AIRPORT</div><div class="service-content"><span class="service-icon">✈</span><h3>Airport transfers</h3><p>Start or end your trip with one less thing to worry about.</p><a href="#book" class="circle-arrow" aria-label="Book an airport transfer">↗</a></div></article>
+        <article class="service-card"><div class="service-photo photo-family"></div><div class="service-number">03 / GROUPS</div><div class="service-content"><span class="service-icon">◇</span><h3>Family & group rides</h3><p>Extra room for the people and bags coming along.</p><a href="#book" class="circle-arrow" aria-label="Book a group ride">↗</a></div></article>
+        <article class="service-card"><div class="service-photo photo-distance"></div><div class="service-number">04 / BEYOND THE CITY</div><div class="service-content"><span class="service-icon">⌁</span><h3>Long-distance trips</h3><p>Pre-book a comfortable ride beyond Greater Montreal.</p><a href="#book" class="circle-arrow" aria-label="Book a long-distance trip">↗</a></div></article>
+      </div>
+      <div class="service-footer"><span>Need something specific?</span><a href="#contact" class="text-link">Talk to our team <span>→</span></a></div>
+    </section>
+
+    <section class="why-section" id="why-lia">
+      <div class="why-visual"><div class="why-photo"></div><div class="why-stamp"><span>THE LIA WAY</span><strong>LOCAL<br>BY NATURE.</strong><span>MADE FOR MONTREAL</span></div><div class="why-caption"><span class="caption-dot"></span> Your neighbourhood, our home.</div></div>
+      <div class="why-copy"><div class="eyebrow">WHY RIDE WITH LIA</div><h2>Good journeys<br>start with <em>good people.</em></h2><p>Getting there should feel straightforward. We're building a taxi experience around the things that matter: clear communication, thoughtful service and respect for your time.</p>
+        <div class="benefit-list">
+          <div class="benefit"><span class="benefit-icon">01</span><div><h3>Local knowledge</h3><p>Made for the streets, neighbourhoods and rhythms of Greater Montreal.</p></div></div>
+          <div class="benefit"><span class="benefit-icon">02</span><div><h3>Simple from the start</h3><p>Clear booking details help you know what comes next.</p></div></div>
+          <div class="benefit"><span class="benefit-icon">03</span><div><h3>People-first service</h3><p>Real support and respectful service, from booking to arrival.</p></div></div>
+        </div>
+        <a class="btn btn-dark" href="#about">Get to know LIA <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="coverage section-pad" id="coverage">
+      <div class="coverage-top"><div><div class="eyebrow">ROOTED HERE. READY TO GO.</div><h2>Montreal is home.<br><em>Let's go from here.</em></h2></div><p>From your front door to the airport and neighbouring communities, plan your next trip with LIA.</p></div>
+      <div class="coverage-content">
+        <div class="map-card" aria-label="Illustrative map of Greater Montreal"><div class="map-grid"></div><svg class="map-lines" viewBox="0 0 600 380" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 270 C100 210 100 330 220 245 S380 120 630 180" fill="none" stroke="#f0c8bd" stroke-width="22"/><path d="M-20 270 C100 210 100 330 220 245 S380 120 630 180" fill="none" stroke="#fff" stroke-width="3"/><path d="M120 -20 C180 70 100 130 240 190 S390 300 430 410" fill="none" stroke="#e5d9c5" stroke-width="15"/><path d="M120 -20 C180 70 100 130 240 190 S390 300 430 410" fill="none" stroke="#fff" stroke-width="3"/><path d="M-20 100 C120 120 220 50 320 90 S470 70 620 25" fill="none" stroke="#e5d9c5" stroke-width="12"/><path d="M-20 100 C120 120 220 50 320 90 S470 70 620 25" fill="none" stroke="#fff" stroke-width="3"/></svg><div class="map-water water-one"></div><div class="map-water water-two"></div><div class="map-label label-montreal"><span class="map-pin">✦</span><strong>MONTRÉAL</strong><small>START HERE</small></div><span class="map-town town-laval">LAVAL</span><span class="map-town town-longueuil">LONGUEUIL</span><span class="map-town town-brossard">BROSSARD</span><span class="map-town town-airport">YUL AIRPORT</span><span class="map-route"></span><div class="map-legend"><span class="legend-dot"></span> LIA service area <span class="legend-line"></span> Key routes</div></div>
+        <div class="coverage-list"><div class="coverage-list-head"><span>OUR SERVICE AREA</span><span>01 — 06</span></div><a href="#book"><span>01</span> Montréal <b>↗</b></a><a href="#book"><span>02</span> Laval <b>↗</b></a><a href="#book"><span>03</span> Longueuil <b>↗</b></a><a href="#book"><span>04</span> South Shore <b>↗</b></a><a href="#book"><span>05</span> North Shore <b>↗</b></a><a href="#book"><span>06</span> Montréal–Trudeau Airport (YUL) <b>↗</b></a><div class="coverage-note">Availability depends on dispatch coverage. <a href="#contact">Ask us about your address →</a></div></div>
+      </div>
+    </section>
+
+    <section class="fare-banner"><div class="fare-mark">L</div><div class="fare-copy"><div class="eyebrow">PLAN AHEAD WITH CONFIDENCE</div><h2>Know your route.<br><em>Plan your ride.</em></h2><p>Airport transfers and longer journeys are easier when the details are clear. Contact LIA to confirm availability, vehicle needs and applicable rates before you travel.</p><a href="#contact" class="btn btn-yellow">Ask about a fare <span>↗</span></a></div><div class="fare-visual"><div class="fare-circle circle-back"></div><div class="fare-circle circle-front"></div><div class="fare-car">LIA</div><div class="fare-note"><span>TRAVEL, MADE SIMPLE</span><strong>Good to go.</strong></div></div></section>
+
+    <section class="journal section-pad" id="journal">
+      <div class="section-heading"><div><div class="eyebrow">THE LIA JOURNAL</div><h2>Local tips for<br><em>better journeys.</em></h2></div><p>Helpful guides for airport days, Montreal neighbourhoods and getting around with less stress.</p></div>
+      <div class="journal-grid">
+        <article class="journal-card"><a class="journal-image journal-airport" href="#blog"><span>TRAVEL SMARTER</span><b>↗</b></a><div class="journal-meta"><span>TRAVEL GUIDE</span><span>6 MIN READ</span></div><h3><a href="#blog">Getting to Montréal-Trudeau Airport: what to plan before you leave</a></h3><p>A practical checklist for timing, luggage and a smoother airport transfer.</p><a class="read-link" href="#blog">Read the guide <span>→</span></a></article>
+        <article class="journal-card"><a class="journal-image journal-city" href="#blog"><span>LOCAL KNOW-HOW</span><b>↗</b></a><div class="journal-meta"><span>MONTREAL LIFE</span><span>5 MIN READ</span></div><h3><a href="#blog">Getting around Greater Montreal: a local's planning guide</a></h3><p>Think ahead about bridges, busy hours and the best time to schedule a ride.</p><a class="read-link" href="#blog">Read the guide <span>→</span></a></article>
+        <article class="journal-card"><a class="journal-image journal-family" href="#blog"><span>RIDE READY</span><b>↗</b></a><div class="journal-meta"><span>RIDER TIPS</span><span>4 MIN READ</span></div><h3><a href="#blog">Travelling with luggage or a group? Choose the right taxi</a></h3><p>What to share when booking so the vehicle fits your trip.</p><a class="read-link" href="#blog">Read the guide <span>→</span></a></article>
+      </div>
+      <div class="journal-disclaimer">Design preview: these are proposed article topics. Publish original, reviewed content before indexing these URLs.</div>
+    </section>
+
+    <section class="driver-section" id="drivers">
+      <div class="driver-photo"></div><div class="driver-content"><div class="eyebrow eyebrow-light">DRIVE WITH LIA</div><h2>Good drivers make<br><em>great journeys.</em></h2><p>Looking for a team that values professionalism, local knowledge and the people behind every ride? Let's start a conversation.</p><ul><li>✓ A professional, respectful environment</li><li>✓ A team that knows the local market</li><li>✓ Clear next steps for interested drivers</li></ul><a class="btn btn-yellow" href="#contact">Become a driver <span>↗</span></a><small>Eligibility and onboarding requirements will be confirmed by the LIA team.</small></div><div class="driver-number">LIA / PEOPLE FIRST</div>
+    </section>
+
+    <section class="about section-pad" id="about"><div class="about-side"><div class="eyebrow">A LITTLE ABOUT US</div><h2>We're not just<br>getting you <em>there.</em></h2></div><div class="about-main"><p class="about-lede">We're here to make getting around Greater Montreal feel a little easier — one thoughtful ride at a time.</p><p>LIA Taxi is being built around dependable service, clear communication and a simple booking experience. Whether it's a regular appointment, an airport departure or a trip across the region, we believe the details matter.</p><a href="#contact" class="text-link">Meet your local taxi team <span>→</span></a></div></section>
+
+    <section class="faq section-pad"><div class="faq-heading"><div class="eyebrow">GOOD TO KNOW</div><h2>Questions before<br><em>you go?</em></h2><p>A few helpful answers to get you started.</p></div><div class="faq-list">
+      <details><summary>Can I book a taxi in advance?<span>+</span></summary><p>This prototype is designed for advance booking requests. Final booking windows and confirmation rules should be set by LIA's dispatch team.</p></details>
+      <details><summary>Do you offer airport transfers to YUL?<span>+</span></summary><p>Airport transfers are planned as a core LIA service. Confirm availability, pickup instructions and the fare with the company before launch.</p></details>
+      <details><summary>Can I request a larger vehicle?<span>+</span></summary><p>Yes, the proposed booking flow includes a minivan option. Vehicle availability and passenger or luggage limits must be confirmed with dispatch.</p></details>
+      <details><summary>Where does LIA Taxi operate?<span>+</span></summary><p>The prototype highlights Montreal, Laval, Longueuil, the North Shore, South Shore and YUL as proposed target areas. The final list should reflect actual operating coverage.</p></details>
+    </div></section>
+
+    <section class="contact-section" id="contact"><div class="contact-inner"><div><div class="eyebrow eyebrow-light">LET'S TALK</div><h2>Need a hand<br>planning your <em>ride?</em></h2><p>Have a question about your trip, a special request or driving with LIA? Send a message and the team can help you with the next step.</p><div class="contact-options"><a href="tel:+15140000000"><span>CALL OUR TEAM</span><strong>+1 (514) 000-0000 ↗</strong></a><a href="mailto:hello@liataxi.ca"><span>EMAIL US</span><strong>hello@liataxi.ca ↗</strong></a></div></div><form class="contact-form" id="contact-form"><h3>Send us a message</h3><div class="contact-form-grid"><label>Your name<input required name="name" placeholder="Full name"></label><label>Email address<input required type="email" name="email" placeholder="you@example.com"></label><label class="contact-wide">What can we help with?<select name="topic"><option>General question</option><option>Booking enquiry</option><option>Become a driver</option><option>Corporate transportation</option></select></label><label class="contact-wide">Your message<textarea required name="message" rows="3" placeholder="Tell us a little about what you need..."></textarea></label></div><button class="btn btn-yellow" type="submit">Send message <span>↗</span></button><div id="contact-message" class="form-message" role="status"></div><small>Front-end demo only. This form does not send or store messages yet.</small></form></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-top"><a class="brand brand-footer" href="#home"><span class="brand-mark"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 27.5 12.5 16a5 5 0 0 1 4.7-3.2h13.6a5 5 0 0 1 4.7 3.2L40 27.5v9H8z" fill="currentColor"/><path d="M14 25h20l-3.2-8H17.2z" fill="#fff"/><path d="M6 29h36v5H6z" fill="#ffd447"/><circle cx="15" cy="36" r="4" fill="#1f242b"/><circle cx="33" cy="36" r="4" fill="#1f242b"/></svg></span><span class="brand-word">lia<span>taxi</span><small>MONTRÉAL</small></span></a><p>Everyday rides. Airport days.<br>All the places in between.</p><a href="#book" class="btn btn-yellow">Book a ride <span>↗</span></a></div><div class="footer-links"><div><span class="footer-label">EXPLORE</span><a href="#services">Our services</a><a href="#about">About LIA</a><a href="#journal">The Journal</a><a href="#drivers">Become a driver</a></div><div><span class="footer-label">GET MOVING</span><a href="#book">Book a taxi</a><a href="#coverage">Service areas</a><a href="#contact">Contact us</a><a href="#faq">FAQs</a></div><div><span class="footer-label">SERVICE AREAS</span><span>Montreal</span><span>Laval & Longueuil</span><span>North & South Shore</span><span>YUL Airport</span></div><div class="footer-newsletter"><span class="footer-label">A NOTE FROM LIA</span><p>Local travel tips and updates, occasionally.</p><form id="newsletter-form"><label class="sr-only" for="newsletter-email">Email address</label><input type="email" id="newsletter-email" required placeholder="Your email address"><button aria-label="Subscribe" type="submit">→</button></form><div id="newsletter-message" class="form-message"></div></div></div><div class="footer-bottom"><span>© <span id="year"></span> LIA Taxi. Concept design for presentation.</span><span>Privacy · Terms <i></i> Made for Montreal.</span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
